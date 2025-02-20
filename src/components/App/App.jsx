@@ -1,20 +1,23 @@
 import Profile from '../Profile/Profile';
+import FriendList from '../FriendList/FriendList';
 import './App.module.css';
 import userData from '../../userData.json';
+import friends from '../../friends.json';
 
 export default function App() {
-  const user = userData[0];
-
   return (
-    <>
-      <Profile
-        key={user.tag}
-        name={user.username}
-        tag={user.tag}
-        location={user.location}
-        image={user.avatar}
-        stats={user.stats}
-      />
-    </>
+    <section className="sections-paddings">
+      <div className="container">
+        <Profile
+          name={userData.username}
+          tag={userData.tag}
+          location={userData.location}
+          image={userData.avatar}
+          stats={userData.stats}
+        />
+
+        <FriendList friends={friends} />
+      </div>
+    </section>
   );
 }
