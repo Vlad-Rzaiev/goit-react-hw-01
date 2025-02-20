@@ -7,18 +7,14 @@ export default function App() {
 
   return (
     <>
-      <section className="sections-paddings">
-        <div className="container">
-          <Profile
-            key={user.tag}
-            name={user.username}
-            tag={user.tag}
-            location={user.location}
-            image={user.avatar}
-            stats={user.stats}
-          />
-        </div>
-      </section>
+      <Profile
+        key={user.tag}
+        name={user.username}
+        tag={user.tag}
+        location={user.location}
+        image={user.avatar}
+        stats={user.stats}
+      />
     </>
   );
 }
