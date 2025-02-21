@@ -1,3 +1,5 @@
+import Section from '../Section/Section';
+import Container from '../Container/Container';
 import Profile from '../Profile/Profile';
 import FriendList from '../FriendList/FriendList';
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
@@ -8,8 +10,8 @@ import transactions from '../../transactions.json';
 
 export default function App() {
   return (
-    <section className="sections-paddings">
-      <div className="container">
+    <Section>
+      <Container>
         <Profile
           name={userData.username}
           tag={userData.tag}
@@ -20,7 +22,7 @@ export default function App() {
         <FriendList friends={friends} />
 
         <TransactionHistory items={transactions} />
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }
